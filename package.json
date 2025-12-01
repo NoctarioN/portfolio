@@ -1,0 +1,27 @@
+{
+  "name": "noctarion-portfolio",
+  "version": "0.0.1",
+  "description": "a personal portfolio with config",
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "MIT",
+  "author": "NoctarioN",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "node-events": "^0.0.2",
+    "node-fetch": "^3.3.2",
+    "path": "^0.12.7",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}
