@@ -1216,7 +1216,57 @@ body[data-mode="light"] .social-subtitle {
     opacity: 1;
 }
 
+.phonenav.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.phonenav.open span:nth-child(2) {
+    opacity: 0;
+}
+.phonenav.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+.phonenav {
+    visibility: hidden;
+}
+
 @media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 220px;
+        height: 100%;
+        background: rgba(10,14,39,0.97);
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .phonenav {
+        display: flex;
+        visibility: hidden;
+    }
+
+    .theme-switcher {
+        width: fixed;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        z-index: 1011; 
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+
     .social-links-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;

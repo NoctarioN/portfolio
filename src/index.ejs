@@ -297,6 +297,19 @@
         if (document.getElementById('music-tracks')) {
             loadMusic();
         }
+        const phonenav = document.createElement('button');
+        phonenav.classList.add('phonenav');
+        phonenav.setAttribute('aria-label', 'Toggle Menu');
+        phonenav.innerHTML = `<span></span><span></span><span></span>`;
+        document.querySelector('.nav-menu').prepend(phonenav);
+
+        const navMenu = document.querySelector('.nav-menu');
+
+        phonenav.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        phonenav.classList.toggle('open');
+});
+
     </script>
 </body>
 </html>
